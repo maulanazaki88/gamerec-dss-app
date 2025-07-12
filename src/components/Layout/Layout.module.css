@@ -1,0 +1,12 @@
+.layout {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Ensure content is above the background carousel */
+.layout > * {
+  position: relative;
+  z-index: 1;
+}

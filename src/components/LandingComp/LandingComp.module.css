@@ -1,0 +1,87 @@
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 20px;
+    gap: 40px;
+}
+
+.formSection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.errorSection {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.error {
+    background: #e74c3c;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.error h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+}
+
+.error p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.resultsSection {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 40px;
+}
+
+.results {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.results h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin: 0 0 30px 0;
+    font-weight: 600;
+}
+
+.gameList {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* GamesItem component sudah punya margin-bottom */
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .main {
+        padding: 20px 10px;
+    }
+    
+    .results {
+        padding: 20px;
+    }
+    
+    .results h2 {
+        font-size: 1.5rem;
+    }
+}

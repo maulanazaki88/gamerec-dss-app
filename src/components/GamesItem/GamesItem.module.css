@@ -1,0 +1,197 @@
+.gameCard {
+  display: flex;
+  align-items: flex-start;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.gameCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.gameImagePlaceholder {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 16px;
+}
+
+.placeholderIcon {
+  font-size: 2rem;
+  opacity: 0.8;
+}
+
+.gameContent {
+  flex: 1;
+  min-width: 0; /* Prevent flex item from overflowing */
+}
+
+.gameTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+  cursor: pointer;
+}
+
+.gameTitle:hover {
+  color: #3498db;
+}
+
+.gameDescription {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+  margin: 0 0 12px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.gameGenres {
+  margin-bottom: 8px;
+}
+
+.genreLabel {
+  font-size: 0.8rem;
+  color: #888;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.genreList {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.genreTag {
+  font-size: 0.75rem;
+  background: #3498db;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.gameCategories {
+  margin-bottom: 4px;
+}
+
+.categoryLabel {
+  font-size: 0.8rem;
+  color: #888;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.categoryList {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.categoryTag {
+  font-size: 0.75rem;
+  background: #95a5a6;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.gameScore {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #27ae60;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.scoreValue {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.scoreLabel {
+  font-size: 0.7rem;
+  opacity: 0.9;
+  margin-top: 2px;
+  line-height: 1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .gameCard {
+    flex-direction: column;
+    padding: 12px;
+  }
+  
+  .gameImagePlaceholder {
+    width: 60px;
+    height: 60px;
+    margin-right: 0;
+    margin-bottom: 12px;
+    align-self: center;
+  }
+  
+  .placeholderIcon {
+    font-size: 1.5rem;
+  }
+  
+  .gameScore {
+    position: static;
+    align-self: flex-end;
+    margin-top: 12px;
+  }
+  
+  .gameTitle {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  .gameDescription {
+    text-align: center;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gameCard {
+    padding: 10px;
+    margin-bottom: 12px;
+  }
+  
+  .gameTitle {
+    font-size: 1rem;
+  }
+  
+  .gameDescription {
+    font-size: 0.8rem;
+    -webkit-line-clamp: 2;
+  }
+  
+  .genreList,
+  .categoryList {
+    justify-content: center;
+  }
+}
